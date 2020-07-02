@@ -1,0 +1,30 @@
+<div class="input-group">
+    <label class="sr-only">Nome do Filme</label>
+    <input 
+    type="text" 
+    class="form-control input-search" 
+    placeholder="Digite o nome do filme"
+    (input)="onUpdateInput($event)">
+    <div class="input-group-append">
+        <button 
+        class="btn btn-search" 
+        type="button"
+        (click)="onMovieSearch()">
+            Buscar filme
+        </button>
+    </div>
+</div>
+
+<!-- Testar o hidden com o [hidden]='true' e aria-hidden -->
+<p *ngIf="hiddenSearchError" class="d-flex justify-content-center">{{communicationText}}</p>
+
+<h2 *ngIf="hiddenSearchResult">RESULTADOS DA BUSCA</h2>
+<div *ngIf="hiddenSearchResult" class="d-flex my-3" style="overflow-x: auto;">
+    <div class="pt-3 px-2 mr-3" *ngFor="let result of results">
+        <img 
+        src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{result.poster_path}}" alt="Poster do filme"
+        onerror="this.onerror=null; this.src='https://dummyimage.com/185x278/a0a0a0/ffffff.jpg&text=Imagem+n%C3%A3o+encontrada'">
+        <h4>{{result.title}}</h4>
+        <p>Data: {{result.release_date}}</p>
+    </div>
+</div>

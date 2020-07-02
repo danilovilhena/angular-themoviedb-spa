@@ -1,0 +1,22 @@
+.btn-search {
+    color: #fff;
+    background-color: #00B3E5;
+    border-color: #00B3E5;
+    font-size: 1.25rem;
+}
+  
+.btn-search:hover {
+    color: #fff;
+    background-color: #0289af;
+    border-color: #0289af;
+}
+
+.input-search{
+    border: 2px solid #00B3E5;
+    font-size: 1.25rem;
+}
+
+.input-group>.custom-select:not(:first-child), .input-group>.form-control:not(:first-child){
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
