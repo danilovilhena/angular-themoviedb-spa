@@ -20,3 +20,23 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+
+.container-results{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title-results{
+    color: #00B3E5;
+    letter-spacing: .025em;
+}
+
+.container-results p, .container-results h5{
+    margin-bottom: 0;
+}
+
+.container-results hr{
+    margin-top: 0.25em;
+    /* margin-bottom: 0; */
+}

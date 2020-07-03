@@ -13,7 +13,7 @@ export class APIServiceComponent {
   searchResult;
 
 
-  searchBase = 'https://api.themoviedb.org/3/search/movie?api_key=6f9325ff74905d1ba8d1ec414e8defe1&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&query=';
+  searchBase = 'https://api.themoviedb.org/3/search/movie?api_key=6f9325ff74905d1ba8d1ec414e8defe1&&language=pt-BR&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&query=';
 
 
   searchForMovie(input) {
