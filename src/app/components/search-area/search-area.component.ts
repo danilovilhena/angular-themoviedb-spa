@@ -7,7 +7,9 @@ import { APIServiceComponent } from '../api-service/api-service.component';
   styleUrls: ['./search-area.component.css']
 })
 export class SearchAreaComponent {
+
   userInput = '';
+  searchResultsObservable;
   results = [];
   hiddenSearchError = false;
   hiddenSearchResult = false;
@@ -20,12 +22,15 @@ export class SearchAreaComponent {
   }
 
   onMovieSearch() {
-    this.apiService.searchForMovie(this.userInput);
-    setTimeout(() => {
-      this.hiddenSearchResult = true;
-      this.results = this.apiService.returnSearchResults();
-      this.formatDate();
-    }, 2000)
+    this.getDataSearched(this.userInput);
+    this.hiddenSearchResult = true;
+  }
+
+  getDataSearched(input) {
+    this.apiService.searchFromAPI(input).subscribe((data) => {
+      this.searchResultsObservable = data;
+      this.results = this.searchResultsObservable.results;
+    });
   }
 
   formatDate() {

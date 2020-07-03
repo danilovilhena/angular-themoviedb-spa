@@ -4,11 +4,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SearchAreaComponent } from './components/search-area/search-area.component';
+import { SearchItemComponent } from './components/search-item/search-item.component';
+import { DiscoverAreaComponent } from './components/discover-area/discover-area.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchAreaComponent
+    SearchAreaComponent,
+    SearchItemComponent,
+    DiscoverAreaComponent
   ],
 
 

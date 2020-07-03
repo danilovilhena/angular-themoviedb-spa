@@ -1,26 +1,3 @@
-.btn-search {
-    color: #fff;
-    background-color: #00B3E5;
-    border-color: #00B3E5;
-    font-size: 1.25rem;
-}
-  
-.btn-search:hover {
-    color: #fff;
-    background-color: #0289af;
-    border-color: #0289af;
-}
-
-.input-search{
-    border: 2px solid #00B3E5;
-    font-size: 1.25rem;
-}
-
-.input-group>.custom-select:not(:first-child), .input-group>.form-control:not(:first-child){
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
 .container-results{
     width: 90%;
     margin-right: auto;
@@ -28,8 +5,9 @@
 }
 
 .title-results{
-    color: #45A960;
+    color: #00B3E5;
     letter-spacing: .025em;
+    text-transform: uppercase;
 }
 
 .container-results h5{
@@ -55,6 +33,6 @@
 
 .item-result:hover{
     cursor: pointer;
-    border: 3px solid #45A960;
+    border: 3px solid #00B3E5;
     border-radius: 5px;
 }
