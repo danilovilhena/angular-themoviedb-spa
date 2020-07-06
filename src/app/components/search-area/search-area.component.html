@@ -15,21 +15,11 @@
     </div>
 </div>
 
-<!-- Testar o hidden com o [hidden]='true' e aria-hidden -->
-<p *ngIf="hiddenSearchError" class="d-flex justify-content-center">{{communicationText}}</p>
-
 <div *ngIf="hiddenSearchResult" class="container-results my-4">
-    <h3 class="title-results">RESULTADOS DA BUSCA</h3>
+    <h3 class="title-results">Resultados da Busca</h3>
     <div class="d-flex my-3" style="overflow-x: scroll;">
-        <div class="py-2 px-2 mr-3 item-result" *ngFor="let result of results">
-            <img 
-            src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{result.poster_path}}" 
-            alt="Poster do filme {{result.title}}"
-            onerror="this.onerror=null; this.src='https://dummyimage.com/185x278/a0a0a0/ffffff.jpg&text=Imagem+n%C3%A3o+encontrada'">
-            <h5 class="w-100">{{result.title}}</h5>
-            
-            <hr>
-            <p>Avaliação: {{result.vote_average}}/10</p>
+        <div class="py-2 px-2 mr-3 movie-result" *ngFor="let result of results">
+            <app-movie-item [result]="result"></app-movie-item>
         </div>
     </div>
 </div> 

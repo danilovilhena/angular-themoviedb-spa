@@ -20,7 +20,7 @@ export class APIServiceComponent {
     return this.httpClient.get('https://api.themoviedb.org/3/discover/movie?with_genres=' + encodeURIComponent(genre) + '&api_key=6f9325ff74905d1ba8d1ec414e8defe1&language=pt-BR&sort_by=popularity.desc&vote_average.gte=5&include_adult=false&include_video=false&page=' + (Math.floor(Math.random() * 25)))
   }
 
-  getGenreList() {
+  getGenreListFromAPI() {
     this.httpClient.get("https://api.themoviedb.org/3/genre/movie/list?api_key=6f9325ff74905d1ba8d1ec414e8defe1&language=pt-BR").subscribe((data) => {
       this.genreList = data;
       this.genreList = this.genreList.genres;
@@ -28,8 +28,15 @@ export class APIServiceComponent {
   }
 
   selectRandomGenre() {
-    let randomGenre = this.genreList[Math.floor(Math.random() * this.genreList.length)];
-    if (!this.randomGenres.includes(randomGenre)) {
+    let position = Math.floor(Math.random() * this.genreList.length);
+    let randomGenre = this.genreList[position];
+
+    if (!this.randomGenres.includes(randomGenre) && randomGenre != undefined) {
+      this.randomGenres.push(randomGenre);
+      return randomGenre;
+    }
+    else {
+      randomGenre = this.genreList[position + 1];
       this.randomGenres.push(randomGenre);
       return randomGenre;
     }

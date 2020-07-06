@@ -11,9 +11,7 @@ export class SearchAreaComponent {
   userInput = '';
   searchResultsObservable;
   results = [];
-  hiddenSearchError = false;
   hiddenSearchResult = false;
-  communicationText = 'Carregando resultados...'
 
   constructor(private apiService: APIServiceComponent) { }
 
@@ -30,6 +28,7 @@ export class SearchAreaComponent {
     this.apiService.searchFromAPI(input).subscribe((data) => {
       this.searchResultsObservable = data;
       this.results = this.searchResultsObservable.results;
+      this.formatDate();
     });
   }
 

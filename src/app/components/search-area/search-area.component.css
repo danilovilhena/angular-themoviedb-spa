@@ -30,6 +30,7 @@
 .title-results{
     color: #45A960;
     letter-spacing: .025em;
+    text-transform: uppercase;
 }
 
 .container-results h5{
@@ -45,7 +46,7 @@
     margin-bottom: 0.25em;
 }
 
-.item-result{
+.movie-result{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -53,7 +54,7 @@
     border-radius: 5px;
 }
 
-.item-result:hover{
+.movie-result:hover{
     cursor: pointer;
     border: 3px solid #45A960;
     border-radius: 5px;

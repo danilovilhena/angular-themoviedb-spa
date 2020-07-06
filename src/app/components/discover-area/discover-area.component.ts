@@ -13,13 +13,11 @@ export class DiscoverAreaComponent implements OnInit {
 
   discoverResultObservable;
   randomGenre;
-  randomGenres = [];
   genreTitle = '';
   results = [];
 
-
   ngOnInit(): void {
-    this.apiService.getGenreList();
+    this.apiService.getGenreListFromAPI();
     setTimeout(() => {
       this.randomGenre = this.apiService.selectRandomGenre();
       this.genreTitle = this.randomGenre.name;
@@ -31,6 +29,14 @@ export class DiscoverAreaComponent implements OnInit {
     this.apiService.discoverFromAPI(genre).subscribe((data) => {
       this.discoverResultObservable = data;
       this.results = this.discoverResultObservable.results;
+      this.formatDate();
     });
+  }
+
+  formatDate() {
+    this.results.forEach((element) => {
+      let split = element.release_date.split('-')
+      element.release_date = split[2] + '/' + split[1] + '/' + split[0]
+    })
   }
 }
