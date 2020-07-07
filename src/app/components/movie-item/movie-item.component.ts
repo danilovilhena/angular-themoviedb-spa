@@ -10,8 +10,6 @@ export class MovieItemComponent {
   constructor(private modalService: NgbModal) { }
 
   @Input() result;
-  closeResult: string;
-
 
   open(content) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', size: 'xl' });

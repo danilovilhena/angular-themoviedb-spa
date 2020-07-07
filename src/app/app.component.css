@@ -1,3 +1,31 @@
 .logo-img{
     max-height: 50px;
 }
+
+footer{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+footer p{
+    margin-bottom: 0;
+}
+
+.icon-ul{
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.icon-li{
+    display: inline-block;
+}
+
+.icon-li a i{
+    font-size: 2em;
+    color: #00B3E5;
+    margin-right: 0.35em;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.icon-li a i:hover{
+    color: #0289af;
+}

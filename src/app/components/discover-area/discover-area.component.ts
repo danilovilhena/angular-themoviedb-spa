@@ -38,7 +38,7 @@ export class DiscoverAreaComponent implements OnInit {
   formatDate() {
     this.results.forEach((result) => {
       if (result.release_date == undefined || result.release_date == '') {
-        result.release_date = 'indisponível'
+        result.release_date = 'Indisponível'
       }
       else {
         let split = result.release_date.split('-')
