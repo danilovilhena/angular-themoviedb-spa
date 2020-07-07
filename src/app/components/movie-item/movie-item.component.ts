@@ -14,7 +14,7 @@ export class MovieItemComponent {
 
 
   open(content) {
-    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', size: 'lg' });
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', size: 'xl' });
   }
 
 }

@@ -29,13 +29,50 @@ export class SearchAreaComponent {
       this.searchResultsObservable = data;
       this.results = this.searchResultsObservable.results;
       this.formatDate();
+      this.formatGenre();
+      this.formatDescription();
     });
   }
 
   formatDate() {
-    this.results.forEach((element) => {
-      let split = element.release_date.split('-')
-      element.release_date = split[2] + '/' + split[1] + '/' + split[0]
+    this.results.forEach((result) => {
+      if (result.release_date == undefined || result.release_date == '') {
+        result.release_date = 'Indisponível'
+      }
+      else {
+        let split = result.release_date.split('-')
+        result.release_date = split[2] + '/' + split[1] + '/' + split[0]
+      }
+    })
+  }
+
+  formatGenre() {
+    this.results.forEach((result) => {
+      if (result.genre_ids.length == 0) {
+        result.genre = 'Indisponíveis'
+      }
+      else {
+        result.genre_ids.forEach((genre) => {
+          this.apiService.genreList.forEach((genreInList) => {
+            if (genreInList.id == genre) {
+              if (result.genre == undefined) {
+                result.genre = genreInList.name;
+              }
+              else {
+                result.genre = result.genre + ', ' + genreInList.name
+              }
+            }
+          })
+        })
+      }
+    })
+  }
+
+  formatDescription() {
+    this.results.forEach((result) => {
+      if (result.overview == '') {
+        result.overview = 'Indisponível para esse filme.'
+      }
     })
   }
 

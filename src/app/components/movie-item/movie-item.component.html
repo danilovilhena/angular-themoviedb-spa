@@ -10,7 +10,7 @@
 
 <ng-template #moviemodal let-modal>
     <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Detalhes do {{result.title}}</h4>
+      <h4 class="modal-title" id="modal-basic-title">Detalhes do filme</h4>
       <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
         <span aria-hidden="true">×</span>
       </button>
@@ -19,16 +19,17 @@
         <img 
         src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{result.poster_path}}" 
         alt="Poster do filme {{result.title}}"
-        class="col-3"
+        style="height: 278px; width: 185px; padding-left: 15px;"
         onerror="this.onerror=null; this.src='https://dummyimage.com/185x278/a0a0a0/ffffff.jpg&text=Imagem+n%C3%A3o+encontrada'">
         <div class="col-3">
             <h4>{{result.title}}</h4>
             <hr class="w-75 ml-0">
             <p><b>Data de lançamento: </b>{{result.release_date}}</p>
+            <p><b>Gêneros: </b>{{result.genre}}</p>
             <p><b>Avaliação: </b>{{result.vote_average}}/10</p>
         </div>
         
-        <div class="col-6 description-div">
+        <div class="col description-div">
             <p><b>Descrição: </b> {{result.overview}}</p>
         </div>
     </div>
