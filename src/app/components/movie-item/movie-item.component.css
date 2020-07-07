@@ -5,3 +5,9 @@
 .description-div{
     border-left: .1px solid rgba(0,0,0,.1);
 }
+
+@media (max-width: 991.98px) { 
+    .description-div{
+        border-left: none;
+    }
+}

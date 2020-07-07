@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { SearchAreaComponent } from './components/search-area/search-area.component';
 import { DiscoverAreaComponent } from './components/discover-area/discover-area.component';
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
+import { MovieThumbComponent } from './components/movie-thumb/movie-thumb.component';
+import { MovieRowComponent } from './components/movie-row/movie-row.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchAreaComponent,
     DiscoverAreaComponent,
-    MovieItemComponent
+    MovieItemComponent,
+    MovieThumbComponent,
+    MovieRowComponent
   ],
 
 

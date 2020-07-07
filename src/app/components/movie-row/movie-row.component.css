@@ -1,0 +1,32 @@
+.movie-result{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 3px solid transparent;
+    border-radius: 5px;
+}
+
+:host-context(.discover) .title-results{
+    color: #00B3E5;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+}
+
+:host-context(.discover) .movie-result:hover{
+    cursor: pointer;
+    border: 3px solid #00B3E5;
+    border-radius: 5px;
+}
+
+:host-context(.search) .title-results{
+    color: #45A960;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+}
+
+:host-context(.search) .movie-result:hover{
+    cursor: pointer;
+    border: 3px solid #45A960;
+    border-radius: 5px;
+}
+

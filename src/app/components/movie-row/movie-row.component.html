@@ -1,0 +1,6 @@
+<h3 class="title-results">{{genreTitle}}</h3>
+<div class="d-flex my-3" style="overflow-x: scroll;">
+    <div class="py-2 px-2 mr-3 movie-result" *ngFor="let result of results">
+        <app-movie-item [result]="result"></app-movie-item>
+    </div>
+</div>
