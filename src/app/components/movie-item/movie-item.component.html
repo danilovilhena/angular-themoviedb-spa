@@ -2,7 +2,7 @@
 
 <ng-template #moviemodal let-modal>
     <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">Detalhes do filme</h4>
+        <h4 class="modal-title" id="modal-basic-title" style="font-size: 24px;">Detalhes do filme</h4>
         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
           <span aria-hidden="true">x</span>
         </button>
@@ -16,7 +16,7 @@
         onerror="this.onerror=null; this.src='https://dummyimage.com/185x278/a0a0a0/ffffff.jpg&text=Imagem+n%C3%A3o+encontrada'">
         <div class="row" style="width: 78%;">
             <div class="col-lg-3">
-                <h4>{{result.title}}</h4>
+                <h4 style="font-size: 24px;">{{result.title}}</h4>
                 <hr class="w-75 ml-0">
                 <p><b>Data de lançamento: </b>{{result.release_date}}</p>
                 <p><b>Gêneros: </b>{{result.genre}}</p>

@@ -18,9 +18,9 @@ footer p{
     display: inline-block;
 }
 .icon-li a i{
-    font-size: 2em;
+    font-size: 2rem;
     color: #00B3E5;
-    margin-right: 0.35em;
+    margin-right: 11.25px;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 

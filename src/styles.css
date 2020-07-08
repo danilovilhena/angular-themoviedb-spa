@@ -65,3 +65,9 @@ Styling related to high contrast
 .contrast .icon-li a i:hover{
     color: #FCE205 !important;
 }
+
+@media (max-width: 991.98px) { 
+    .contrast .description-div{
+        border-left: none;
+    }
+}
