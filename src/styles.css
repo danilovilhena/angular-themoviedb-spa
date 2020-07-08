@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+/* 
+Styling related to high contrast
+*/
+.contrast .logo-img{
+    fill: yellow;
+}
+.contrast body{
+    background: #000 !important;
+    color: #fff !important;
+}
+/* Acessibility bar */
+.contrast .acessibility-ul{
+    background: black !important;
+    border-bottom: 2px solid white !important;
+}
+.contrast .acessibility-li:hover{
+    border: 3px solid yellow !important;
+}
+/* Search area related */
+.contrast .btn-search{
+    background: yellow !important;
+    border-color: yellow !important;
+    color: black !important;
+}
+.contrast .btn-search:hover {
+    color: black !important;
+    background-color: #FCE205 !important;
+    border-color: #FCE205 !important;
+}
+.contrast .input-search{
+    border: 2px solid #fff !important;
+}
+/* Movie rows related */
+.contrast .title-results{
+    color: yellow !important;
+}
+.contrast .movie-result:hover{
+    border: 3px solid yellow !important;
+}
+.contrast .modal-header{
+    background: black !important;
+    border: 3px solid white;
+}
+.contrast .modal-body{
+    background: black !important;
+    border: 3px solid white;
+    border-top: 0;
+}
+.contrast .close span{
+    color: white !important;
+}
+.contrast hr{
+    border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+.contrast .description-div{
+    border-left: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+/* Footer related */
+.contrast footer{
+    border-top: 2px solid white !important;
+}
+.contrast .icon-li a i{
+    color: yellow !important;
+}
+.contrast .icon-li a i:hover{
+    color: #FCE205 !important;
+}

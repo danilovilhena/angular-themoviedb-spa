@@ -9,6 +9,7 @@ import { DiscoverAreaComponent } from './components/discover-area/discover-area.
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
 import { MovieThumbComponent } from './components/movie-thumb/movie-thumb.component';
 import { MovieRowComponent } from './components/movie-row/movie-row.component';
+import { AcessibilityBarComponent } from './components/acessibility-bar/acessibility-bar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MovieRowComponent } from './components/movie-row/movie-row.component';
     DiscoverAreaComponent,
     MovieItemComponent,
     MovieThumbComponent,
-    MovieRowComponent
+    MovieRowComponent,
+    AcessibilityBarComponent
   ],
 
 

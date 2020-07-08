@@ -1,7 +1,6 @@
 .logo-img{
     max-height: 50px;
 }
-
 footer{
     background: rgba(0, 0, 0, 0.1);
 }
@@ -18,7 +17,6 @@ footer p{
 .icon-li{
     display: inline-block;
 }
-
 .icon-li a i{
     font-size: 2em;
     color: #00B3E5;
