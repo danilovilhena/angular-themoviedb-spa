@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-acessibility-bar',
   templateUrl: './acessibility-bar.component.html',
   styleUrls: ['./acessibility-bar.component.css']
 })
+
 export class AcessibilityBarComponent {
   bodySize = 16;
   h3Size = 28;

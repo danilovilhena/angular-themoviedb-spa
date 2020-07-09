@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DiscoverAreaComponent implements OnInit {
 
-  constructor(private apiService: APIServiceComponent, private httpClient: HttpClient) { }
+  constructor(private apiService: APIServiceComponent) { }
 
   discoverResultObservable;
   randomGenre;

@@ -3,16 +3,3 @@
     margin-right: auto;
     margin-left: auto;
 }
-
-.container-results h5{
-    margin-top: 8px;
-}
-
-.container-results p, .container-results h5{
-    margin-bottom: 0;
-}
-
-.container-results hr{
-    margin-top: 4px;
-    margin-bottom: 4px;
-}

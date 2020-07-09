@@ -1,6 +1,5 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: "root"
@@ -17,7 +16,7 @@ export class APIServiceComponent {
   }
 
   discoverFromAPI(genre) {
-    return this.httpClient.get('https://api.themoviedb.org/3/discover/movie?with_genres=' + encodeURIComponent(genre) + '&api_key=6f9325ff74905d1ba8d1ec414e8defe1&language=pt-BR&sort_by=popularity.desc&vote_average.gte=5&include_adult=false&include_video=false&page=' + (Math.floor(Math.random() * 25)))
+    return this.httpClient.get('https://api.themoviedb.org/3/discover/movie?with_genres=' + encodeURIComponent(genre) + '&api_key=6f9325ff74905d1ba8d1ec414e8defe1&language=pt-BR&sort_by=popularity.desc&vote_average.gte=7&include_adult=false&include_video=false&page=' + (Math.floor(Math.random() * 25)))
   }
 
   getGenreListFromAPI() {

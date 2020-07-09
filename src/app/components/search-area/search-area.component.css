@@ -26,16 +26,3 @@
     margin-right: auto;
     margin-left: auto;
 }
-
-.container-results h5{
-    margin-top: 0.5em;
-}
-
-.container-results p, .container-results h5{
-    margin-bottom: 0;
-}
-
-.container-results hr{
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
-}
